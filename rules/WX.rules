@@ -1,0 +1,31 @@
+; 去掉金额开头的￥
+
+skip 17
+
+fields date,type,payee,goods,inout,amount,method,status,id1,id2,_
+
+date-format %Y-%m-%d %H:%M:%s
+
+currency CNY
+
+status !
+
+description %type - %payee - %goods
+
+account2 收入:未知
+if %inout 收入
+  account1 资产:流动资产:微信:零钱
+
+if %inout 支出
+  amount -%amount
+  account2 支出:未知
+
+if %type 转入零钱通-来自零钱
+  account1 资产:流动资产:微信:零钱通
+  account2 资产:流动资产:微信:零钱
+  status *
+
+if %method 零钱通
+  account1 资产:流动资产:微信:零钱通
+
+include payee.rules

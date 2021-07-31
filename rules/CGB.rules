@@ -1,0 +1,15 @@
+skip 1
+
+fields date,description,_,_,_,amount,_
+
+date-format %Y-%m-%d
+
+currency CNY 
+
+account1 负债:信用卡:广发银行
+
+status !
+
+account2 支出:未知
+
+include payee.rules

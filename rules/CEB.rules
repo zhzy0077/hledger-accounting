@@ -1,0 +1,24 @@
+; Copy from e.cebbank.com
+; Replace 存入 to -
+
+skip 1
+
+fields date,date2,_,description,amount
+
+date-format %Y-%m-%d
+
+currency CNY
+
+status !
+
+account1 负债:信用卡:光大银行
+
+amount -%amount
+
+if %date2 未入账
+  date2 %date
+
+include payee.rules
+
+if 还款
+  skip

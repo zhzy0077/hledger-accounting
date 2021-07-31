@@ -1,0 +1,29 @@
+skip 1
+
+fields date,date_,description,location,_,_,amount
+
+date-format %Y-%m-%d
+
+currency CNY 
+
+account1 负债:信用卡:招商银行
+
+status !
+
+if %date_ [0-9\-]
+  date2 %date_
+
+comment: location:%location
+
+account2 支出:未知
+
+if %amount_ -
+  account2 收入:未知
+
+amount -%amount
+
+; Will show in the debit's transaction
+if %description ^掌上生活还款$
+  skip
+
+include payee.rules

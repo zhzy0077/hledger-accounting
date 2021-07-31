@@ -1,0 +1,22 @@
+; Copy from e.cebbank.com
+
+skip 1
+
+fields date,_,description,amount,,_
+
+date-format %Y-%m-%d
+
+currency CNY 
+
+amount -%amount
+
+account1 负债:信用卡:民生银行
+
+if 美元
+  currency USD 
+
+include payee.rules
+
+; Will show in the debit's transaction
+if %description 信用卡还款
+  skip

@@ -1,0 +1,17 @@
+; Excel to CSV UTF8
+
+skip 5
+
+fields date,amount,description,balance
+
+date-format %m/%d/%Y %H:%M
+
+currency CNY
+
+status !
+
+account2 收入:未知
+account1 资产:支付宝:余额宝
+
+
+include payee.rules

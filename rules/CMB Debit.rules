@@ -1,0 +1,27 @@
+skip 7
+
+fields date,time,income,expense,balance,comment,description
+
+date-format %Y%m%d
+
+currency CNY 
+
+account1 资产:流动资产:银行:招商银行:银行存款
+  account2 支出:未知
+
+status !
+
+comment: time:%time comment: %comment 
+
+newest-first
+
+if %income [0-9]
+  amount %income
+
+if %expense [0..9]
+  amount -%expense
+
+if #
+  skip
+
+include payee.rules
