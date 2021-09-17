@@ -2,17 +2,17 @@
 
 我经常能在互联网上看到咨询日常记账软件或者资产管理软件的帖子, 但是在我看来通过常见的记账软件手工记账的方式, 对日常心智负担比较大, 一方面是容易漏记, 另一方面是无法同时实现对资产的管理.
 
-我在年前开始有记账的想法, 先后用过诸多国产的记账软件, 以及 GnuCash, Beancount, 最后我遇到了我现在在用的 hledger, 已经记录了半年了, 平均一个月有 300+的交易记录:
+我在年前开始有记账的想法, 先后用过诸多国产的记账软件, 以及 GnuCash, Beancount, 最后我遇到了我现在在用的 hledger, 至今共有 3000+ 交易记录:
 ```
-Transactions span        : 2020-11-30 to 2021-08-01 (244 days)
-Last transaction         : 2021-07-31 (0 days ago)
-Transactions             : 1353 (5.5 per day)
-Transactions last 30 days: 332 (11.1 per day)
-Transactions last 7 days : 84 (12.0 per day)
-Payees/descriptions      : 452
-Accounts                 : 92 (depth 5)
+Transactions span        : 2020-07-01 to 2021-09-18 (444 days)
+Last transaction         : 2021-09-17 (0 days ago)
+Transactions             : 3531 (8.0 per day)
+Transactions last 30 days: 235 (7.8 per day)
+Transactions last 7 days : 70 (10.0 per day)
+Payees/descriptions      : 886
+Accounts                 : 112 (depth 5)
 Commodities              : 2 (CNY, USD)
-Market prices            : 2 (USD)
+Market prices            : 4 (USD)
 ```
 
 目前这个解决方案的优势如下:
