@@ -7,7 +7,6 @@ date-format %Y%m%d
 currency CNY 
 
 account1 资产:流动资产:银行:招商银行:银行存款
-  account2 支出:未知
 
 status !
 
@@ -17,9 +16,110 @@ newest-first
 
 if %income [0-9]
   amount %income
+  account2 收入:未知
 
 if %expense [0..9]
   amount -%expense
+  account2 支出:未知
+
+
+if
+支付鼓励金
+活动现金红包
+体验金收益
+贵金属份额卖出
+  account2 收入:红包
+  status *
+
+if
+财付通支付
+零钱通
+腾安基金销售
+  account2 资产:流动资产:微信:零钱通
+  status *
+
+if
+朝朝宝
+  account2 资产:流动资产:银行:招商银行:朝朝宝
+  status *
+
+if
+600090
+601090
+  account2 资产:流动资产:银行:招商银行:聚益生金90天
+  status *
+  
+if 620035
+  account2 资产:流动资产:银行:招商银行:聚益生金35天
+  status *
+
+if
+600063
+620063
+  account2 资产:流动资产:银行:招商银行:聚益生金63天
+  status *
+
+if 银证转账
+  account2 资产:流动资产:中金财富:余额
+  status *
+
+if 上海交通卡
+  account2 资产:流动资产:公交卡:上海交通卡
+  status *
+
+if 广发银行（二三类账户充值）
+  account2 资产:流动资产:银行:广发银行:发哒钱包
+  status *
+
+if
+601060
+  account2 资产:流动资产:银行:招商银行:聚益生金60天
+  status *
+
+if 600063
+  account2 资产:流动资产:银行:招商银行:聚益生金63天
+  status *
+
+if
+003388
+001925
+003473
+004502
+004841
+217004
+002298
+002960
+003316
+  account2 资产:流动资产:银行:招商银行:朝朝盈
+  status *
+
+if
+兴证全球基金管理有限公司
+  account2 资产:流动资产:支付宝:余额宝
+  status *
+
+if
+分红
+捷付睿通
+平安付
+  account2 收入:理财收益
+  status *
+
+if
+结息
+  account2 收入:存款利息
+  status *
+
+if
+中意人寿
+保险费
+  account2 收入:保险理赔
+  status *
+
+if
+报销
+  account2 收入:报销
+  status *
 
 if #
   skip
