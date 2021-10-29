@@ -35,3 +35,7 @@ Market prices            : 4 (USD)
 1. [为什么是 hledger](docs/why-hledger.md)
 1. [hledger](docs/hledger.md)
 1. [导入](docs/import.md)
+
+
+### Next Step
+1. Time Tracking.
