@@ -4,15 +4,15 @@
 
 我在年前开始有记账的想法, 先后用过诸多国产的记账软件, 以及 GnuCash, Beancount, 最后我遇到了我现在在用的 hledger, 至今共有 3000+ 交易记录:
 ```
-Transactions span        : 2020-07-01 to 2021-09-18 (444 days)
-Last transaction         : 2021-09-17 (0 days ago)
-Transactions             : 3531 (8.0 per day)
-Transactions last 30 days: 235 (7.8 per day)
-Transactions last 7 days : 70 (10.0 per day)
-Payees/descriptions      : 886
-Accounts                 : 112 (depth 5)
-Commodities              : 2 (CNY, USD)
-Market prices            : 4 (USD)
+Transactions span        : 2020-07-01 to 2022-05-07 (675 days)
+Last transaction         : 2022-05-06 (4 days ago)
+Transactions             : 5291 (7.8 per day)
+Transactions last 30 days: 193 (6.4 per day)
+Transactions last 7 days : 131 (18.7 per day)
+Payees/descriptions      : 1392
+Accounts                 : 136 (depth 5)
+Commodities              : 14
+Market prices            : 767
 ```
 
 目前这个解决方案的优势如下:
